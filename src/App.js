@@ -9,6 +9,8 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
+      // lat: undefined,
+      // long: undefined,
       city: undefined,
       country: undefined,
       main: undefined,
@@ -21,6 +23,27 @@ class App extends React.Component {
 
   }
 
+  // getPosition = () => {
+  //   return new Promise(function (resolve, reject) {
+  //     navigator.geolocation.getCurrentPosition(resolve, reject);
+  //   });
+  // }
+
+  // getWeather2 = async (latitude, longitude) => {
+  //   const api_call = await fetch(`//api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${Api_Key}&units=metric`);
+  //   const data = await api_call.json();
+  //   const response = await api_call.json();
+  //   this.setState({
+  //     lat: latitude,
+  //     lon: longitude,
+  //     city: data.name,
+  //     temperatureC: Math.round(data.main.temp),
+  //     temperatureF: Math.round(data.main.temp * 1.8 + 32),
+  //   })
+    
+    
+  // }
+  
   calCelsius(temp) {
     let cell = Math.floor(temp - 273.15);
     return cell;
